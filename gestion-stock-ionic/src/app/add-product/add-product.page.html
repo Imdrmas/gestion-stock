@@ -1,0 +1,57 @@
+
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title class="title">Add product</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="spinner" *ngIf="showSpinner">
+    <ion-spinner name="bubbles" color="danger"></ion-spinner>
+  </div>
+  <hr style="border: 1px solid #eee; height: 0">
+
+  <ion-list class="ion-list-border">
+
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="form.name" #prodcutName="ngModel" (ngModelChange)="checkedName()"></ion-input>
+      <ion-text color="danger" *ngIf="showMessage">
+        <h4>Product name exist</h4>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-input type="text" [(ngModel)]="form.description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Price</ion-label>
+      <ion-input type="number" [(ngModel)]="form.price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Quantity</ion-label>
+      <ion-input type="number" [(ngModel)]="form.quantity"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Photo</ion-label>
+      <ion-input type="text" [(ngModel)]="form.photo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="secondary" (click)="onSubmit()">Save</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" fill="outline" color="danger" (click)="dismissModal()">Cancel</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

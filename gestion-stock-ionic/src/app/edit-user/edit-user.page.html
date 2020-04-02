@@ -1,0 +1,43 @@
+
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title class="title">Update user</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="spinner" *ngIf="showSpinner">
+    <ion-spinner name="bubbles" color="danger"></ion-spinner>
+  </div>
+  <hr style="border: 1px solid #eee; height: 0">
+
+  <ion-list class="ion-list-border">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="jwtResponse.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="jwtResponse.username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="email" [(ngModel)]="jwtResponse.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="jwtResponse.password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="secondary" (click)="onSubmit()">Register</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" fill="outline" color="danger" (click)="dismissModal()">Cancel</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,47 @@
+
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title class="title"><ion-icon name="log-out"></ion-icon> Register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="spinner" *ngIf="showSpinner">
+    <ion-spinner name="bubbles" color="danger"></ion-spinner>
+  </div>
+  <hr style="border: 1px solid #eee; height: 0">
+
+  <ion-list class="ion-list-border">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="form.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" [(ngModel)]="form.username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="form.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="form.password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="secondary" (click)="onSubmit()">Register</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" fill="outline" color="danger" (click)="dismissModal()">Cancel</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

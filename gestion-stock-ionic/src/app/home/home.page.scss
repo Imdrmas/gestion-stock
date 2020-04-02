@@ -1,0 +1,124 @@
+.header {
+  background: #1B9CFC;
+  height: 180px;
+  padding-top: 1px;
+}
+.header h2 {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.header .space-between {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0 10px;
+}
+.header .followings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.header .followings p {
+  color: #ffffff;
+  margin: 8px 0 0 0;
+}
+.img-box {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.border-white {
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  width: fit-content;
+}
+.border-blue {
+  border: 7px solid #34ace0;
+  border-radius: 50%;
+  width: fit-content;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-top: -76px;
+}
+.tweet {
+  margin-top: -10px;
+}
+.tweet ion-label {
+  line-height: 1 !important;
+  font-size: 15px;
+  margin: 6px 0 !important;
+  min-height: 34px;
+}
+.tweet-img {
+  width: 95%;
+  margin-left: 2.5%;
+  border-radius: 10px;
+}
+
+.accordoin-list {
+  padding-top: 0 !important;
+}
+.class-section .accordoin-list-class {
+  --ion-item-background: #ffffff;
+  .section, .section-active {
+    --min-height: 58px;
+  }
+}
+
+.class-section .section {
+  --ion-item-background: #ffffff;
+  --ion-item-color: #000000;
+  border-top: 2px solid #dfe4ea;
+  padding: 6px 0;
+}
+
+.class-section .section-active {
+  --ion-item-background: #ffc400;
+  --ion-item-color: #ffffff;
+  font-weight: 600;
+
+  ion-icon {
+    color: #ffffff;
+  }
+}
+
+.class-section .child-list {
+  padding: 0;
+  margin: 0;
+
+  .child, .child-active {
+    margin-bottom: 2px;
+  }
+}
+
+.class-section .child {
+  --ion-item-background: #e8e7e6;
+  --ion-item-color: #000000;
+}
+
+.class-section .child-active {
+  --ion-item-background: #fad86b;
+  --ion-item-color: #ffffff;
+
+  ion-icon {
+    color: #ffffff;
+  }
+}
+
+.class-section .padding-list {
+  padding: 0;
+  margin: 0;
+}
+.product-name {
+  margin-left: 18px;
+  font-size: 18px;
+  font-family: initial;
+}
+.imgCommand {
+  height: 150px;
+}

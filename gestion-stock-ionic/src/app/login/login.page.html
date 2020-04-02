@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-card>
+      <ion-item color="secondary">
+        <ion-icon name="archive" slot="start"></ion-icon>
+        <ion-label>Login to access gestion stock</ion-label>
+      </ion-item>
+    </ion-card>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="ion-padding">
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title><ion-icon name="log-in"></ion-icon> Please full the fields</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-text *ngIf="isLoginFailed" color="danger">
+        <p style="text-align: center; font-weight: bold; margin-top: 5px">Username or password not correct</p>
+      </ion-text>
+      
+      <div class="spinner" *ngIf="showSpinner">
+        <ion-spinner name="bubbles" color="danger"></ion-spinner>
+      </div>
+      <hr style="border: 1px solid #eee; height: 0">
+
+      <ion-list class="ion-list-border">
+
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input type="text" [(ngModel)]="form.username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="form.password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+         <ion-row>
+           <ion-col>
+             <ion-button expand="block" color="secondary" (click)="onSubmit()">Login</ion-button>
+           </ion-col>
+           <ion-col>
+             <ion-button expand="block" fill="outline" color="danger" (click)="register()">Register</ion-button>
+           </ion-col>
+         </ion-row>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-card>
+    <ion-card-content>
+      <ion-img src="https://www.economie-gestion.com/wp-content/uploads/2018/10/gestion-de-stocks-inventarios-1-728.jpg"></ion-img> 
+    </ion-card-content>
+  </ion-card>
+  <ion-toolbar color="danger" class="ion-text-center">
+   <ion-label>All copy tright resved by Drmas</ion-label>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Edit command</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class="ion-padding">
+    <form [formGroup]="addCommandForm">
+    <ion-item>
+      <ion-icon name="time-outline"></ion-icon>
+      <ion-datetime value="{{commande.createAt | date}}" formControlName="createAt"></ion-datetime>       
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea value="{{commande.comment}}" formControlName="comment"></ion-textarea>
+    </ion-item>
+
+
+      <ion-button color="secondary" (click)="addCommand()">
+        Edit command
+      </ion-button>
+
+    </form>
+  </ion-list>
+
+</ion-content>
